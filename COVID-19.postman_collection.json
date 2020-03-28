@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "fed247fa-7024-4aa1-adce-e3cbb0358c94",
+		"name": "COVID-19",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Case History",
+			"item": [
+				{
+					"name": "USA",
+					"item": [
+						{
+							"name": "All US Cases",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://corona.lmao.ninja/countries/USA",
+									"protocol": "https",
+									"host": [
+										"corona",
+										"lmao",
+										"ninja"
+									],
+									"path": [
+										"countries",
+										"USA"
+									]
+								},
+								"description": "Shows the total number of confirmed cases in the USA."
+							},
+							"response": []
+						},
+						{
+							"name": "By US State",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://corona.lmao.ninja/states",
+									"protocol": "https",
+									"host": [
+										"corona",
+										"lmao",
+										"ninja"
+									],
+									"path": [
+										"states"
+									]
+								},
+								"description": "Shows the number of confirmed cases by individual US state."
+							},
+							"response": []
+						},
+						{
+							"name": "By US City",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://corona.lmao.ninja/jhucsse",
+									"protocol": "https",
+									"host": [
+										"corona",
+										"lmao",
+										"ninja"
+									],
+									"path": [
+										"jhucsse"
+									]
+								},
+								"description": "Shows the number of confirmed cases by each US city."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "All Cases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/all",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"all"
+							]
+						},
+						"description": "Shows the total count of all confirmed cases, deaths and recovered."
+					},
+					"response": []
+				},
+				{
+					"name": "UK Cases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/countries/UK",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"countries",
+								"UK"
+							]
+						},
+						"description": "Shows the total confirmed cases in the UK."
+					},
+					"response": []
+				},
+				{
+					"name": "Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/countries?sort=country",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "country"
+								}
+							]
+						},
+						"description": "Shows the total number of confirmed cases by individual country."
+					},
+					"response": []
+				},
+				{
+					"name": "Historical Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/v2/historical",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"v2",
+								"historical"
+							]
+						},
+						"description": "Shows the total number of confirmed cases for each country, each day since the start of 2020."
+					},
+					"response": []
+				}
+			],
+			"description": "A collection of API requests which show the number of confirmed cases of COVID-19 by Country, State and City.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3cf106b5-26ee-4281-b963-3dda8bd8e622",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "12087786-2d92-4e6a-8f3c-152b69dc058c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "WHO Information",
+			"item": [
+				{
+					"name": "WHO News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.who.int/rss-feeds/news-english.xml",
+							"protocol": "https",
+							"host": [
+								"www",
+								"who",
+								"int"
+							],
+							"path": [
+								"rss-feeds",
+								"news-english.xml"
+							]
+						},
+						"description": "The latest news from the World Health Organisation (WHO)."
+					},
+					"response": []
+				},
+				{
+					"name": "Emergencies and Disaster News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.who.int/feeds/entity/hac/en/rss.xml",
+							"protocol": "https",
+							"host": [
+								"www",
+								"who",
+								"int"
+							],
+							"path": [
+								"feeds",
+								"entity",
+								"hac",
+								"en",
+								"rss.xml"
+							]
+						},
+						"description": "Shows the latest Emergencies and Disasters reported by the World Health Organisation (WHO)."
+					},
+					"response": []
+				}
+			],
+			"description": "The latest information from the World Health Organisation (WHO).",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "093df9ac-807d-4a18-83ac-2104a7831b37",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2189df5-e5ef-4495-9705-bb119c805221",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
